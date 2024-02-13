@@ -34,7 +34,7 @@ public class MonsterBuffManager : MonoBehaviour
         buffdict.Add(17, new MonsterEventBuff(SpawnBuff_SpeedupField, MonsterBuffType.OnSpawn, 0, ForceFieldstrategyFactory.SpeedupField()));
         for (int i = 0; i < 18; i++)
         {
-            OnselectMonsterBuff(i,5);
+          //  OnselectMonsterBuff(i,5);
         }
     }
     public void OnselectMonsterBuff(int index,int bufflevel)

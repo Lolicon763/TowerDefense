@@ -43,7 +43,7 @@ public class MapEditor : MonoBehaviour
     private bool isSettingValue = false;
     private int Wavecount;
     private Vector3 CastlePos;
-    private Vector3[] MonsterSpawnPositions = new Vector3[4];
+    private Vector3[] MonsterSpawnPositions = new Vector3[3];
     private void Awake()
     {
         if (Instance == null)
@@ -106,6 +106,7 @@ public class MapEditor : MonoBehaviour
             if (Node.NodeOccupiedBy == NodeType.MonsterSpawnPoint)
             {
                 int indx = pair.Value.SpawnPointIndex;
+                Debug.Log($"index = {indx},pair .key = {pair.Key}");
                 MonsterSpawnPositions[indx] = pair.Key;
                 Debug.Log($"MonsterSpawnPositions[{indx}] = {MonsterSpawnPositions[indx]}");
             }
@@ -256,7 +257,7 @@ public class MapEditor : MonoBehaviour
     {
         Dictionary<Vector3, NodeInGame> nodeInGames = GetMap();
         Pathfinding pathfinder = new Pathfinding(nodeInGames,true);
-        for (int i = 1; i < 4; i++)
+        for (int i = 0; i < 3; i++)
         {
             if (MonsterSpawnPositions[i] != null)
             {
@@ -264,7 +265,7 @@ public class MapEditor : MonoBehaviour
                 List<NodeInGame> pathToCastle = pathfinder.FindPath(MonsterSpawnPositions[i], CastlePos);
                 if (pathToCastle == null || pathToCastle.Count == 0)
                 {
-                    Debug.LogError($"Map is not valid! Monster spawn point {i + 1},(pos = {MonsterSpawnPositions[i]}) does not have a path to the castle.");
+                    Debug.LogError($"Map is not valid! Monster spawn point {i },(pos = {MonsterSpawnPositions[i]}) does not have a path to the castle.");
                     return false;
                 }
                 else
@@ -491,15 +492,29 @@ public class MapEditor : MonoBehaviour
             }
             if (spawnPoints.Count == 3)
             {
+                for (int i = 0; i < 3; i++)
+                {
+                    spawnPoints[i].SpawnPointIndex = i - 1;
+                }
                 Node firstSpawn = spawnPoints[0];
                 firstSpawn.ResetSpawnNumber();  // Reset the text component
                 firstSpawn.SetType(NodeType.Empty);  // Set the first spawn to empty
                 firstSpawn.SpawnPointIndex = 0;  // Reset the SpawnPointIndex
                 spawnPoints.RemoveAt(0);
+
             }
             spawnPoints.Add(node);
             node.SetSpawnNumber(spawnPoints.Count);
-            node.SpawnPointIndex = spawnPoints.Count;  // Set the SpawnPointIndex
+            node.SpawnPointIndex = spawnPoints.Count-1;  // Set the SpawnPointIndex
+            for (int i = 0; i < spawnPoints.Count; i++)
+            {
+                if (spawnPoints[i]!= null)
+                {
+                    Debug.Log($"spawnPoints[i].SpawnPointIndex = {spawnPoints[i].SpawnPointIndex}");
+                    spawnPoints[i].SpawnPointIndex = i;
+                }
+
+            }
         }
         else if (node.Type == NodeType.MonsterSpawnPoint && typeToSet != NodeType.MonsterSpawnPoint)
         {

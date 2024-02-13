@@ -140,14 +140,14 @@ public class Pathfinding
             }
         }
     }
-    private int GetTerrainPenalty(NodeInGame node)
+    public static int GetTerrainPenalty(NodeInGame node)
     {
         switch (node.NodeOccupiedBy)
         {
             case NodeType.Empty:
                 return 0;
             case NodeType.Wall:
-                return 0;
+                return 1000;
             case NodeType.MonsterSpawnPoint:
                 return 0;
             case NodeType.Building:

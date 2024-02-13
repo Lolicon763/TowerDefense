@@ -268,7 +268,7 @@ public class CostumGameManager : MonoBehaviour
             Vector3 Pos = levelData.mapData.nodes[i].Pos.ToVector3();
             if (levelData.mapData.nodes[i].type == NodeType.MonsterSpawnPoint)
             {
-                int indx = levelData.mapData.nodes[i].SpawnPointIndex - 1;
+                int indx = levelData.mapData.nodes[i].SpawnPointIndex ;
                 MonsterSpawnPointPos[indx] = Pos;
             }
             if (levelData.mapData.nodes[i].type == NodeType.Castle)

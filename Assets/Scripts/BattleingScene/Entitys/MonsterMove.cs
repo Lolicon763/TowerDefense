@@ -12,7 +12,7 @@ public class MonsterMove : MonoBehaviour
     public Vector3 EndPos = Vector3.zero;
     private Monster monster;
     private List<NodeInGame> path = new();
-    private int targetIndex = 1;
+    private int targetIndex = 0;
     private MonsterAttack monsterAttack;
     private bool shouldRecalculatePath = false;
     private int aggressiveness;
@@ -44,10 +44,6 @@ public class MonsterMove : MonoBehaviour
         StartPos = transform.position;
         monster.LastPos = transform.position;
         EndPos = CostumGameManager.CastlePos;
-        foreach (var node in SpawnMap.GridMap)
-        {
-            node.Value.Obj.GetComponent<SpriteRenderer>().color = Color.white;
-        }
     }
     public void OnEnable()
     {
@@ -63,7 +59,7 @@ public class MonsterMove : MonoBehaviour
         bool TargetingTower;
         TargetingTower = aggressiveness > 0;
         aggressiveness = Math.Max(0, aggressiveness - 1);
-        Pathfinding pathfinder = new Pathfinding(CostumGameManager.nodeInGames, TargetingTower);
+        Pathfinding pathfinder = new Pathfinding(CostumGameManager.nodeInGames, true);
         Vector3 targetPos = RoudedVector3(EndPos);
         Vector3 startPos = RoudedVector3(StartPos);
         List<NodeInGame> nodeInGames = pathfinder.FindPath(startPos, targetPos);
@@ -72,9 +68,8 @@ public class MonsterMove : MonoBehaviour
         int i = 0;
         foreach (NodeInGame node in path)
         {
-            Sb.AppendLine($"path node {i} = {node.Position}");
+            Sb.AppendLine($"path node {i} = {node.Position}, penalty = {Pathfinding.GetTerrainPenalty(node)}");
             i++;
-            SpawnMap.GridMap[node.Position].Obj.GetComponent<SpriteRenderer>().color = Color.black;
         }
         Debug.Log(Sb.ToString());
         shouldRecalculatePath = false;
