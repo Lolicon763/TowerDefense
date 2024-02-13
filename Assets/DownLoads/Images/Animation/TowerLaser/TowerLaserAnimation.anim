@@ -1,0 +1,137 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: TowerLaserAnimation
+  serializedVersion: 7
+  m_Legacy: 0
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves: []
+  m_CompressedRotationCurves: []
+  m_EulerCurves: []
+  m_PositionCurves: []
+  m_ScaleCurves: []
+  m_FloatCurves: []
+  m_PPtrCurves:
+  - serializedVersion: 2
+    curve:
+    - time: 0
+      value: {fileID: 21300000, guid: 9d63fb18c76028f4a9d265fb8301d978, type: 3}
+    - time: 0.083333336
+      value: {fileID: 21300000, guid: e8ce0a86d81b5ac499b99859b8f19f28, type: 3}
+    - time: 0.16666667
+      value: {fileID: 21300000, guid: 0b3ecfb7794b3e64685a238b468b613d, type: 3}
+    - time: 0.25
+      value: {fileID: 21300000, guid: 13b3431fb2494854eb9814898fc6c1ba, type: 3}
+    - time: 0.33333334
+      value: {fileID: 21300000, guid: d622f82f85cbad34d9156e9dc740ef19, type: 3}
+    - time: 0.41666666
+      value: {fileID: 21300000, guid: 3b9ad9561cb12d54b97559fd74d94b19, type: 3}
+    - time: 0.5
+      value: {fileID: 21300000, guid: d9ed789468ff2e64fb279a84c2001ffb, type: 3}
+    - time: 0.5833333
+      value: {fileID: 21300000, guid: 3839f88ddec030445856094631eeb671, type: 3}
+    - time: 0.6666667
+      value: {fileID: 21300000, guid: b95dcd22545beb84f86eb2f6a0cff3e3, type: 3}
+    - time: 0.75
+      value: {fileID: 21300000, guid: eb1ffeadc9a9634428111dcca85eb8a8, type: 3}
+    - time: 0.8333333
+      value: {fileID: 21300000, guid: 63f45dbbe3a9f464a814078d6d777d1e, type: 3}
+    - time: 0.9166667
+      value: {fileID: 21300000, guid: 71b9156aa0bb828429bb24f262d272cf, type: 3}
+    - time: 1
+      value: {fileID: 21300000, guid: 9b140978ed4cd6644bc3a0af37d166e7, type: 3}
+    - time: 1.0833334
+      value: {fileID: 21300000, guid: 4ef35f1ca76c4794f9c0df068baf2d63, type: 3}
+    - time: 1.1666666
+      value: {fileID: 21300000, guid: 1eec2d2c61c8f90488d10bfa23074c5c, type: 3}
+    - time: 1.25
+      value: {fileID: 21300000, guid: 7157e6aee2c0d9f4abf2abe75dffa97e, type: 3}
+    - time: 1.3333334
+      value: {fileID: 21300000, guid: 0d4afe26006170e4da236cd226064780, type: 3}
+    - time: 1.4166666
+      value: {fileID: 21300000, guid: d4c27a49722306247a41d361b878cf7b, type: 3}
+    attribute: m_Sprite
+    path: 
+    classID: 212
+    script: {fileID: 0}
+    flags: 2
+  m_SampleRate: 12
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_ClipBindingConstant:
+    genericBindings:
+    - serializedVersion: 2
+      path: 0
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    pptrCurveMapping:
+    - {fileID: 21300000, guid: 9d63fb18c76028f4a9d265fb8301d978, type: 3}
+    - {fileID: 21300000, guid: e8ce0a86d81b5ac499b99859b8f19f28, type: 3}
+    - {fileID: 21300000, guid: 0b3ecfb7794b3e64685a238b468b613d, type: 3}
+    - {fileID: 21300000, guid: 13b3431fb2494854eb9814898fc6c1ba, type: 3}
+    - {fileID: 21300000, guid: d622f82f85cbad34d9156e9dc740ef19, type: 3}
+    - {fileID: 21300000, guid: 3b9ad9561cb12d54b97559fd74d94b19, type: 3}
+    - {fileID: 21300000, guid: d9ed789468ff2e64fb279a84c2001ffb, type: 3}
+    - {fileID: 21300000, guid: 3839f88ddec030445856094631eeb671, type: 3}
+    - {fileID: 21300000, guid: b95dcd22545beb84f86eb2f6a0cff3e3, type: 3}
+    - {fileID: 21300000, guid: eb1ffeadc9a9634428111dcca85eb8a8, type: 3}
+    - {fileID: 21300000, guid: 63f45dbbe3a9f464a814078d6d777d1e, type: 3}
+    - {fileID: 21300000, guid: 71b9156aa0bb828429bb24f262d272cf, type: 3}
+    - {fileID: 21300000, guid: 9b140978ed4cd6644bc3a0af37d166e7, type: 3}
+    - {fileID: 21300000, guid: 4ef35f1ca76c4794f9c0df068baf2d63, type: 3}
+    - {fileID: 21300000, guid: 1eec2d2c61c8f90488d10bfa23074c5c, type: 3}
+    - {fileID: 21300000, guid: 7157e6aee2c0d9f4abf2abe75dffa97e, type: 3}
+    - {fileID: 21300000, guid: 0d4afe26006170e4da236cd226064780, type: 3}
+    - {fileID: 21300000, guid: d4c27a49722306247a41d361b878cf7b, type: 3}
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_AdditiveReferencePoseClip: {fileID: 0}
+    m_AdditiveReferencePoseTime: 0
+    m_StartTime: 0
+    m_StopTime: 1.5
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_HasAdditiveReferencePose: 0
+    m_LoopTime: 1
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_HasGenericRootTransform: 0
+  m_HasMotionFloatCurves: 0
+  m_Events:
+  - time: 0.8333333
+    functionName: CalculateDamage
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.4166666
+    functionName: destroyLaser
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

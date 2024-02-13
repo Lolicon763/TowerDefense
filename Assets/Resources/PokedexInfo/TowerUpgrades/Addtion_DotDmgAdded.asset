@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6a6b93071dfb9941ae5bb5c0c13410e, type: 3}
+  m_Name: Addtion_DotDmgAdded
+  m_EditorClassIdentifier: 
+  Index: 0
+  UpgradeName: Addtion_DotDmgAdded
+  description: 
+  DetailedDescription: 
+  TowerBuffType: 0f00000006000000
