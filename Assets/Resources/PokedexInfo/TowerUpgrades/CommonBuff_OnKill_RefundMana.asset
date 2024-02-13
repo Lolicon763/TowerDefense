@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: CommonBuff_OnKill_RefundMana
   m_EditorClassIdentifier: 
   Index: 6
-  UpgradeName: CommonBuff_OnKill_RefundMana
-  description: 
-  DetailedDescription: 
+  UpgradeName:
+  - CommonBuff_OnKill_RefundMana
+  - 
+  description:
+  - CommonBuff_OnKill_RefundMana
+  - 
+  DetailedDescription:
+  - CommonBuff_OnKill_RefundMana
+  - 
   TowerBuffType: 000000000c000000

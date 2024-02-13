@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: MagicBoltTowerBuff_OnFiring_AdditionBolt
   m_EditorClassIdentifier: 
   Index: 12
-  UpgradeName: MagicBoltTowerBuff_OnFiring_AdditionBolt
-  description: 
-  DetailedDescription: 
+  UpgradeName:
+  - MagicBoltTowerBuff_OnFiring_AdditionBolt
+  - 
+  description:
+  - MagicBoltTowerBuff_OnFiring_AdditionBolt
+  - 
+  DetailedDescription:
+  - MagicBoltTowerBuff_OnFiring_AdditionBolt
+  - 
   TowerBuffType: 0300000008000000

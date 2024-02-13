@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: SpawnBuff_AddStats
   m_EditorClassIdentifier: 
   Index: 16
-  UpgradeName: SpawnBuff_AddStats
-  description: 
-  DetailedDescription: 
+  UpgradeName:
+  - SpawnBuff_AddStats
+  - 
+  description:
+  - SpawnBuff_AddStats
+  - "\u751F\u6210\u6642\uFF0C\u6709\u6A5F\u6703\u518D\u6DFB\u52A0\u5404\u9805\u5C6C\u6027"
+  DetailedDescription:
+  - SpawnBuff_AddStats
+  - "\u751F\u6210\u6642\uFF0C\u6709(\u6578\u503C)%\u7684\u6A5F\u7387\u518D\u6DFB\u52A0\u984D\u5916(\u6578\u503C)%\u7684\u5404\u9805\u5C6C\u6027"
   monsterBuffTags: 0000000007000000

@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: SwampTowerBuff_AddPoisionStackDot
   m_EditorClassIdentifier: 
   Index: 16
-  UpgradeName: SwampTowerBuff_AddPoisionStackDot
-  description: 
-  DetailedDescription: 
+  UpgradeName:
+  - SwampTowerBuff_AddPoisionStackDot
+  - 
+  description:
+  - SwampTowerBuff_AddPoisionStackDot
+  - 
+  DetailedDescription:
+  - SwampTowerBuff_AddPoisionStackDot
+  - 
   TowerBuffType: 040000000900000006000000

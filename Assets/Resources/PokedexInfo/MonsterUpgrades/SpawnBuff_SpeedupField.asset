@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: SpawnBuff_SpeedupField
   m_EditorClassIdentifier: 
   Index: 17
-  UpgradeName: SpawnBuff_SpeedupField
-  description: 
-  DetailedDescription: 
+  UpgradeName:
+  - SpawnBuff_SpeedupField
+  - 
+  description:
+  - SpawnBuff_SpeedupField
+  - "\u751F\u6210\u6642\uFF0C\u6709\u6A5F\u6703\u5728\u8173\u5E95\u7ACB\u523B\u751F\u6210\u4E00\u500B\u52A0\u901F\u529B\u5834\n"
+  DetailedDescription:
+  - SpawnBuff_SpeedupField
+  - "\u751F\u6210\u6642\uFF0C\u6709(\u6578\u503C)%\u7684\u6A5F\u7387\u5728\u8173\u5E95\u7ACB\u523B\u751F\u6210\u4E00\u500B(\u6578\u503C)\u5927\u5C0F\u7684\u52A0\u901F\u529B\u5834\n"
   monsterBuffTags: 0000000006000000

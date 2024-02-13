@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: BreachedBuff_DeductAdditionMana
   m_EditorClassIdentifier: 
   Index: 7
-  UpgradeName: BreachedBuff_DeductAdditionMana
-  description: 
-  DetailedDescription: 
+  UpgradeName:
+  - BreachedBuff_DeductAdditionMana
+  - 
+  description:
+  - BreachedBuff_DeductAdditionMana
+  - "\u62B5\u9054\u7D42\u9EDE\u6642\uFF0C\u6839\u64DA\u5269\u9918\u8840\u91CF\u4F86\u984D\u5916\u6263\u9664\u6301\u6709\u7684\u9B54\u529B"
+  DetailedDescription:
+  - BreachedBuff_DeductAdditionMana
+  - "\u62B5\u9054\u7D42\u9EDE\u6642\uFF0C\u6839\u64DA\u5269\u9918\u8840\u91CF\u7684(\u6578\u503C)%\uFF0C\u984D\u5916\u6263\u9664\u6301\u6709\u7684\u9B54\u529B"
   monsterBuffTags: 0400000009000000

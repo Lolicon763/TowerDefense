@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: SwampTowerBuff_DieInRangeReinforceTower
   m_EditorClassIdentifier: 
   Index: 17
-  UpgradeName: SwampTowerBuff_DieInRangeReinforceTower
-  description: 
-  DetailedDescription: 
+  UpgradeName:
+  - SwampTowerBuff_DieInRangeReinforceTower
+  - 
+  description:
+  - SwampTowerBuff_DieInRangeReinforceTower
+  - 
+  DetailedDescription:
+  - SwampTowerBuff_DieInRangeReinforceTower
+  - 
   TowerBuffType: 040000000c000000

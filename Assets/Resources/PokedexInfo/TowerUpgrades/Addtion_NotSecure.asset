@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: Addtion_NotSecure
   m_EditorClassIdentifier: 
   Index: 1
-  UpgradeName: Addtion_ProbCanProcTwice
-  description: 
-  DetailedDescription: 
+  UpgradeName:
+  - Addtion_NotSecure
+  - 
+  description:
+  - Addtion_NotSecure
+  - 
+  DetailedDescription:
+  - Addtion_NotSecure
+  - 
   TowerBuffType: 0f00000000000000

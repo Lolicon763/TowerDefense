@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: ContinuousBuff_TriggerBuffEasier
   m_EditorClassIdentifier: 
   Index: 11
-  UpgradeName: ContinuousBuff_TriggerBuffEasier
-  description: 
-  DetailedDescription: 
+  UpgradeName:
+  - ContinuousBuff_TriggerBuffEasier
+  - 
+  description:
+  - ContinuousBuff_TriggerBuffEasier
+  - "\u602A\u7269\u5011\u66F4\u5BB9\u6613\u89F8\u767C\u5404\u9805\u6548\u679C"
+  DetailedDescription:
+  - ContinuousBuff_TriggerBuffEasier
+  - "\u602A\u7269\u5011\u66F4\u5BB9\u6613\u89F8\u767C\u5404\u9805\u6548\u679C"
   monsterBuffTags: 0b0000000a000000

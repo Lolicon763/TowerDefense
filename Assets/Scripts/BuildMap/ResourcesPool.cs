@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Xml.Serialization;
 using UnityEngine;
-using static UnityEditor.PlayerSettings;
 
 public class ResourcesPool : MonoBehaviour
 {
@@ -11,16 +9,16 @@ public class ResourcesPool : MonoBehaviour
     public List<List<GameObject>> MonsterPool = new();
     public List<GameObject> MonsterPrefabs = new();
     public List<Transform> MonsterParent = new();
-    private List<GameObject> magicBoltPool = new ();
+    private List<GameObject> magicBoltPool = new();
     public GameObject MagicBoltPrefab;
     public GameObject MagicBoltsParent;
-    private List<GameObject> laserPool = new ();
+    private List<GameObject> laserPool = new();
     public GameObject LaserPrefab;
     public GameObject LaserParent;
-    private List<GameObject> swampPool = new ();
+    private List<GameObject> swampPool = new();
     public GameObject SwampPrefab;
     public GameObject SwampParent;
-    private List<GameObject> healthBarPool = new ();
+    private List<GameObject> healthBarPool = new();
     public GameObject HealthBarPrefab;
     public GameObject HealthBarParent;
     private const int LaserCount = 50;
@@ -46,14 +44,14 @@ public class ResourcesPool : MonoBehaviour
     public GameObject SpeedUpBridgesParent;
     private List<GameObject> SpeedUpBridge_2Pool = new();
     public GameObject SpeedupBridge_2Prefab;
-    private List <GameObject> ShieldBridgePool = new();
+    private List<GameObject> ShieldBridgePool = new();
     public GameObject ShieldBridgePrefab;
     public GameObject ShieldBridgeParent;
     public GameEvent OnAllResourcesLoaded;
 
-    public List<List<PokedexInfo>> PokedexInfos = new ();
-    public List<MonsterUpgradesInfo> MonsterUpgradesInfos = new ();
-    public List<TowerUpgradesInfo> TowerUpgradesInfos = new ();
+    public List<List<PokedexInfo>> PokedexInfos = new();
+    public List<MonsterUpgradesInfo> MonsterUpgradesInfos = new();
+    public List<TowerUpgradesInfo> TowerUpgradesInfos = new();
     private void Awake()
     {
         if (ResourcePoolInstance == null)
@@ -82,11 +80,11 @@ public class ResourcesPool : MonoBehaviour
     void LoadUpgradesInfo()
     {
         TowerUpgradesInfo[] towerInfos = Resources.LoadAll<TowerUpgradesInfo>("PokedexInfo/TowerUpgrades");
-        TowerUpgradesInfos = new List<TowerUpgradesInfo> (towerInfos);
+        TowerUpgradesInfos = new List<TowerUpgradesInfo>(towerInfos);
         MonsterUpgradesInfo[] MonsterInfos = Resources.LoadAll<MonsterUpgradesInfo>("PokedexInfo/MonsterUpgrades");
         MonsterUpgradesInfos = new List<MonsterUpgradesInfo>(MonsterInfos);
     }
-    IEnumerator  LoadText()
+    IEnumerator LoadText()
     {
         LoadPokedexInfo("Module");
         LoadPokedexInfo("Monster");
@@ -99,7 +97,7 @@ public class ResourcesPool : MonoBehaviour
         StartCoroutine(InitMonsters());
         yield return null;
         StartCoroutine(InitializeLaserPoolCoroutine());
-        yield return null; 
+        yield return null;
         StartCoroutine(InitializeMagicBoltPoolCoroutine());
         yield return null;
         StartCoroutine(InitializeSwampPoolCoroutine());
@@ -203,7 +201,7 @@ public class ResourcesPool : MonoBehaviour
         magicBoltPool.Add(newObj);
         return newObj;
     }
-    public GameObject GetSpeedUpSign(Vector3 pos )
+    public GameObject GetSpeedUpSign(Vector3 pos)
     {
         foreach (GameObject obj in SpeedUpSignPool)
         {
@@ -276,7 +274,7 @@ public class ResourcesPool : MonoBehaviour
         ShieldBridgePool.Add(newObj);
         return newObj;
     }
-    public GameObject GetSpeedupBridge1(Vector3 pos,Quaternion quaternion )
+    public GameObject GetSpeedupBridge1(Vector3 pos, Quaternion quaternion)
     {
         foreach (GameObject obj in SpeedUpBridge_1Pool)
         {
@@ -331,11 +329,11 @@ public class ResourcesPool : MonoBehaviour
         }
         return list;
     }
-    public GameObject GetMonster(Vector3 Pos,int Monsterindex)
+    public GameObject GetMonster(Vector3 Pos, int Monsterindex)
     {
-        foreach(GameObject obj in MonsterPool[Monsterindex])
+        foreach (GameObject obj in MonsterPool[Monsterindex])
         {
-            if(!obj.activeInHierarchy)
+            if (!obj.activeInHierarchy)
             {
                 obj.SetActive(true);
                 obj.transform.position = Pos;
@@ -376,7 +374,7 @@ public class ResourcesPool : MonoBehaviour
     }
     IEnumerator InitializeLaserPoolCoroutine()
     {
-        for (int i = 0; i <LaserCount; i++)
+        for (int i = 0; i < LaserCount; i++)
         {
             GameObject obj = Instantiate(LaserPrefab);
             obj.transform.SetParent(LaserParent.transform);
@@ -438,7 +436,7 @@ public class ResourcesPool : MonoBehaviour
     }
     IEnumerator InitializeBridgesPoolCoroutine()
     {
-        for (int i = 0; i < SignCount*2; i++)
+        for (int i = 0; i < SignCount * 2; i++)
         {
             GameObject obj1 = Instantiate(SpeedUpBridge_1Prefab);
             obj1.transform.SetParent(SpeedUpBridgesParent.transform);

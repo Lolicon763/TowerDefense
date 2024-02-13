@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: MagicBoltTowerBuff_regainManaOnBulletWaste
   m_EditorClassIdentifier: 
   Index: 14
-  UpgradeName: MagicBoltTowerBuff_regainManaOnBulletWaste
-  description: 
-  DetailedDescription: 
+  UpgradeName:
+  - MagicBoltTowerBuff_regainManaOnBulletWaste
+  - 
+  description:
+  - MagicBoltTowerBuff_regainManaOnBulletWaste
+  - 
+  DetailedDescription:
+  - MagicBoltTowerBuff_regainManaOnBulletWaste
+  - 
   TowerBuffType: 030000000e000000

@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: LaserTowerBuff_OnHit_AddDot
   m_EditorClassIdentifier: 
   Index: 9
-  UpgradeName: LaserTowerBuff_OnHit_AddDot
-  description: 
-  DetailedDescription: 
+  UpgradeName:
+  - LaserTowerBuff_OnHit_AddDot
+  - 
+  description:
+  - LaserTowerBuff_OnHit_AddDot
+  - 
+  DetailedDescription:
+  - LaserTowerBuff_OnHit_AddDot
+  - 
   TowerBuffType: 0200000009000000

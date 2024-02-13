@@ -1,15 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
+using GameEnum;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
-using GameEnum;
-using static UnityEditor.Timeline.TimelinePlaybackControls;
-using Unity.VisualScripting;
-using TMPro;
-using static UnityEditor.Progress;
 
-public class NodeCTRL : MonoBehaviour,IPointerClickHandler
+public class NodeCTRL : MonoBehaviour, IPointerClickHandler
 {
     private NodeData nodeData;
     private GameObject obj;

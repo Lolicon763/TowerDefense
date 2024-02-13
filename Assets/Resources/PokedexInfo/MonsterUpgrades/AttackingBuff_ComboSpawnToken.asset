@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: AttackingBuff_ComboSpawnToken
   m_EditorClassIdentifier: 
   Index: 4
-  UpgradeName: AttackingBuff_ComboSpawnToken
-  description: 
-  DetailedDescription: 
+  UpgradeName:
+  - AttackingBuff_ComboSpawnToken
+  - 
+  description:
+  - AttackingBuff_ComboSpawnToken
+  - "\u82E5\u5E72\u6B21\u9023\u7E8C\u653B\u64CA\u4E4B\u5F8C\uFF0C\u5728\u4E0A\u4E00\u500B\u683C\u5B50\u53EC\u63DB\u4E00\u500B\u4EE3\u5E63\u3002"
+  DetailedDescription:
+  - AttackingBuff_ComboSpawnToken
+  - "(\u6B21\u6578)\u6B21\u653B\u64CA\u5F8C\uFF0C\u5728\u4E0A\u4E00\u500B\u683C\u5B50\u53EC\u63DB\u4E00\u500B(\u6578\u503C)\u7684\u4EE3\u5E63"
   monsterBuffTags: 0200000005000000

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 using System;
-using static UnityEditor.Progress;
 
 public class MonsterMove : MonoBehaviour
 {

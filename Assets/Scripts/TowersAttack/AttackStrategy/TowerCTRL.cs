@@ -38,6 +38,7 @@ public class TowerCTRL : MonoBehaviour, IPointerClickHandler
     private void OnEnable()
     {
         Requirement = new LevelupRequirement();
+
     }
     private void Start()
     {
@@ -169,6 +170,7 @@ public class TowerCTRL : MonoBehaviour, IPointerClickHandler
     void OnCyclicalEventTrigger(Monster monster)
     {
         Cyclical?.Invoke(this, monster, -1);
+        Continuous?.Invoke(this,monster,-1);//暫時放在這裡
     }
     void OnAttackedEventTrigger(Monster monster)
     {

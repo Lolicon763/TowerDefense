@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: AllTowerBuff_Notsecure
   m_EditorClassIdentifier: 
   Index: 4
-  UpgradeName: AllTowerBuff_OnKill_SpawnGrave
-  description: 
-  DetailedDescription: 
+  UpgradeName:
+  - AllTowerBuff_Notsecure
+  - 
+  description:
+  - AllTowerBuff_Notsecure
+  - 
+  DetailedDescription:
+  - AllTowerBuff_Notsecure
+  - 
   TowerBuffType: 0100000000000000

@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: AttackedBuff_DefendField
   m_EditorClassIdentifier: 
   Index: 1
-  UpgradeName: AttackedBuff_DefendField
-  description: 
-  DetailedDescription: 
+  UpgradeName:
+  - AttackedBuff_DefendField
+  - 
+  description:
+  - AttackedBuff_DefendField
+  - "\u88AB\u653B\u64CA\u6642\uFF0C\u6709\u6A5F\u7387\u5728\u8173\u4E0B\u5C55\u958B\u4E00\u500B\u529B\u5834\u4EE5\u63D0\u4F9B\u8B77\u76FE"
+  DetailedDescription:
+  - AttackedBuff_DefendField
+  - "\u88AB\u653B\u64CA\u6642\uFF0C\u6709(\u6A5F\u7387)\u6A5F\u7387\u5728\u7576\u524D\u7684\u683C\u5B50\u5C55\u958B\u4E00\u500B\u534A\u5F91(\u6578\u503C)\u7684\u529B\u5834\u4EE5\u63D0\u4F9B(\u6578\u503C)\u7684\u8B77\u76FE"
   monsterBuffTags: 0100000006000000

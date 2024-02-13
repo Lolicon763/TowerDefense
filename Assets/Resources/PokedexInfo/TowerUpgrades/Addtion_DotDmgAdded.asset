@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: Addtion_DotDmgAdded
   m_EditorClassIdentifier: 
   Index: 0
-  UpgradeName: Addtion_DotDmgAdded
-  description: 
-  DetailedDescription: 
+  UpgradeName:
+  - Addtion_DotDmgAdded
+  - 
+  description:
+  - Addtion_DotDmgAdded
+  - 
+  DetailedDescription:
+  - Addtion_DotDmgAdded
+  - 
   TowerBuffType: 0f00000006000000

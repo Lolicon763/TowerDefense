@@ -34,6 +34,7 @@ public class CostumGameManager : MonoBehaviour
     public Transform TowerBuffFiltered;
     private List<Button> filteredMonsterBuff = new();
     private List<Button> filteredTowerBuff = new();
+    public TMPro.TextMeshProUGUI BuffDetailText;
     void Start()
     {
         SetGamePhase(GamePhase.StartOfTurn);
@@ -154,21 +155,24 @@ public class CostumGameManager : MonoBehaviour
         for (int i = 0; i < MonsterBuffFiltered.childCount; i++)
         {
             Button button = MonsterBuffFiltered.GetChild(i).GetComponent<Button>();
-            button.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = ResourcesPool.ResourcePoolInstance.MonsterUpgradesInfos[i].UpgradeName;
+            MonsterUpgradesInfo info = ResourcesPool.ResourcePoolInstance.MonsterUpgradesInfos[i];
+            button.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = info.UpgradeName[0];
             filteredMonsterBuff.Add(button);
-            button.onClick.AddListener(() => ShowDetail());
+            string text = info.DetailedDescription[1];
+            button.onClick.AddListener(() => ShowDetail(text));
         }
         for (int i = 0; i < TowerBuffFiltered.childCount; i++)
         {
             Button button = TowerBuffFiltered.GetChild(i).GetComponent<Button>();
-            button.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = ResourcesPool.ResourcePoolInstance.TowerUpgradesInfos[i].UpgradeName;
+            TowerUpgradesInfo info = ResourcesPool.ResourcePoolInstance.TowerUpgradesInfos[i];
+            button.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = info.UpgradeName[0];
+            string text = info.DetailedDescription[1];
             filteredTowerBuff.Add(button);
-            button.onClick.AddListener(() => ShowDetail());
+            button.onClick.AddListener(() => ShowDetail(text));
         }
     }
     void OnTowerFilterButtonClick(TowerBuffTag tag)
     {
-        Debug.Log($"Button with tag {tag} was clicked.");
         var filteredUpgrades = ResourcesPool.ResourcePoolInstance.TowerUpgradesInfos.Where(upgrade => upgrade.TowerBuffType.Contains(tag)).ToList();
         int count = filteredUpgrades.Count;
         foreach (var item in filteredTowerBuff)
@@ -195,9 +199,9 @@ public class CostumGameManager : MonoBehaviour
             filteredMonsterBuff[filteredUpgrades[i].Index].gameObject.SetActive(true);
         }
     }
-    void ShowDetail()
+    void ShowDetail(string text)
     {
-        Debug.Log("Do something");
+        BuffDetailText.text = text;
     }
     IEnumerator SpawnMonstersFromPoint(int spawnPointIndex, Dictionary<int, int> monstersToSpawn)
     {

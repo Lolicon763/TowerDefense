@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: MagicBoltTowerBuff_OnHit_SmallAreaExplosion
   m_EditorClassIdentifier: 
   Index: 13
-  UpgradeName: MagicBoltTowerBuff_OnHit_SmallAreaExplosion
-  description: 
-  DetailedDescription: 
+  UpgradeName:
+  - MagicBoltTowerBuff_OnHit_SmallAreaExplosion
+  - 
+  description:
+  - MagicBoltTowerBuff_OnHit_SmallAreaExplosion
+  - 
+  DetailedDescription:
+  - MagicBoltTowerBuff_OnHit_SmallAreaExplosion
+  - 
   TowerBuffType: 0300000009000000

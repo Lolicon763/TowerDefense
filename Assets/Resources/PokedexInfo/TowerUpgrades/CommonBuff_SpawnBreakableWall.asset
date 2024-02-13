@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: CommonBuff_SpawnBreakableWall
   m_EditorClassIdentifier: 
   Index: 8
-  UpgradeName: CommonBuff_SpawnBreakableWall
-  description: 
-  DetailedDescription: 
+  UpgradeName:
+  - CommonBuff_SpawnBreakableWall
+  - 
+  description:
+  - CommonBuff_SpawnBreakableWall
+  - 
+  DetailedDescription:
+  - CommonBuff_SpawnBreakableWall
+  - 
   TowerBuffType: 0000000005000000

@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: DefeatedBuff_SpawnToken
   m_EditorClassIdentifier: 
   Index: 14
-  UpgradeName: DefeatedBuff_SpawnToken
-  description: 
-  DetailedDescription: 
+  UpgradeName:
+  - DefeatedBuff_SpawnToken
+  - 
+  description:
+  - DefeatedBuff_SpawnToken
+  - "\u6B7B\u4EA1\u6642\uFF0C\u5728\u4E0A\u4E00\u500B\u683C\u5B50\u53EC\u63DB\u4E00\u500B\u4EE3\u5E63"
+  DetailedDescription:
+  - DefeatedBuff_SpawnToken
+  - "\u6B7B\u4EA1\u6642\uFF0C\u5728\u4E0A\u4E00\u500B\u683C\u5B50\u53EC\u63DB\u4E00\u500B\u5229\u7528\u7387(\u6578\u503C)%\u7684\u4EE3\u5E63"
   monsterBuffTags: 0300000005000000

@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: LaserTowerBuff_OnHit_Stun
   m_EditorClassIdentifier: 
   Index: 11
-  UpgradeName: LaserTowerBuff_OnHit_Stun
-  description: 
-  DetailedDescription: 
+  UpgradeName:
+  - LaserTowerBuff_OnHit_Stun
+  - 
+  description:
+  - LaserTowerBuff_OnHit_Stun
+  - 
+  DetailedDescription:
+  - LaserTowerBuff_OnHit_Stun
+  - 
   TowerBuffType: 0200000009000000

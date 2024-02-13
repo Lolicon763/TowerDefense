@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: AllTowerBuff_AddOnHitEffect
   m_EditorClassIdentifier: 
   Index: 3
-  UpgradeName: AllTowerBuff_AddOnHitEffect
-  description: 
-  DetailedDescription: 
+  UpgradeName:
+  - AllTowerBuff_AddOnHitEffect
+  - 
+  description:
+  - AllTowerBuff_AddOnHitEffect
+  - 
+  DetailedDescription:
+  - AllTowerBuff_AddOnHitEffect
+  - 
   TowerBuffType: 010000000d000000

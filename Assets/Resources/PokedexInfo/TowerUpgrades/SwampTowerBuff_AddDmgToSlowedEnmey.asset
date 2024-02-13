@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: SwampTowerBuff_AddDmgToSlowedEnmey
   m_EditorClassIdentifier: 
   Index: 15
-  UpgradeName: SwampTowerBuff_AddDmgToSlowedEnmey
-  description: 
-  DetailedDescription: 
+  UpgradeName:
+  - SwampTowerBuff_AddDmgToSlowedEnmey
+  - 
+  description:
+  - SwampTowerBuff_AddDmgToSlowedEnmey
+  - 
+  DetailedDescription:
+  - SwampTowerBuff_AddDmgToSlowedEnmey
+  - 
   TowerBuffType: 0400000007000000

@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: Addtion_ProbCanProcTwice
   m_EditorClassIdentifier: 
   Index: 2
-  UpgradeName: Addtion_ProbCanProcTwice
-  description: 
-  DetailedDescription: 
+  UpgradeName:
+  - Addtion_ProbCanProcTwice
+  - 
+  description:
+  - Addtion_ProbCanProcTwice
+  - 
+  DetailedDescription:
+  - Addtion_ProbCanProcTwice
+  - 
   TowerBuffType: 0f0000000e000000

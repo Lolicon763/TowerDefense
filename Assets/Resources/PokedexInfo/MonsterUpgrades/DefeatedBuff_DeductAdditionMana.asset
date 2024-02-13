@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: DefeatedBuff_DeductAdditionMana
   m_EditorClassIdentifier: 
   Index: 12
-  UpgradeName: DefeatedBuff_DeductAdditionMana
-  description: 
-  DetailedDescription: 
+  UpgradeName:
+  - DefeatedBuff_DeductAdditionMana
+  - 
+  description:
+  - DefeatedBuff_DeductAdditionMana
+  - "\u5728\u6B7B\u4EA1\u6642\uFF0C\u6839\u64DA\u751F\u5B58\u7684\u6642\u9593\uFF0C\u6263\u9664\u9B54\u529B\u3002"
+  DetailedDescription:
+  - DefeatedBuff_DeductAdditionMana
+  - "\u5728\u6B7B\u4EA1\u6642\uFF0C\u6839\u64DA\u884C\u8D70\u7D93\u904E\u7684\u683C\u5B50\u4F86\u6263\u9664\u9B54\u529B\uFF0C\u524D\u5E7E\u500B\u683C\u5B50\u76F8\u5DEE\u4E0D\u5927\uFF0C\u5F8C\u9762\u6703\u5F88\u5FEB\u901F\u5730\u722C\u5347\u3002"
   monsterBuffTags: 0300000009000000

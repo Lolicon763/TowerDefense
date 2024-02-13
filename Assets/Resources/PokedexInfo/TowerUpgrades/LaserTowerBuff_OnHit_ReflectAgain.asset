@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: LaserTowerBuff_OnHit_ReflectAgain
   m_EditorClassIdentifier: 
   Index: 10
-  UpgradeName: LaserTowerBuff_OnHit_ReflectAgain
-  description: 
-  DetailedDescription: 
+  UpgradeName:
+  - LaserTowerBuff_OnHit_ReflectAgain
+  - 
+  description:
+  - LaserTowerBuff_OnHit_ReflectAgain
+  - 
+  DetailedDescription:
+  - LaserTowerBuff_OnHit_ReflectAgain
+  - 
   TowerBuffType: 0200000009000000

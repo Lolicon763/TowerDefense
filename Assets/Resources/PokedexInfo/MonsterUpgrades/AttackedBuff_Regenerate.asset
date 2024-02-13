@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: AttackedBuff_Regenerate
   m_EditorClassIdentifier: 
   Index: 2
-  UpgradeName: AttackedBuff_Regenerate
-  description: 
-  DetailedDescription: 
+  UpgradeName:
+  - AttackedBuff_Regenerate
+  - 
+  description:
+  - AttackedBuff_Regenerate
+  - "\u88AB\u653B\u64CA\u6642\uFF0C\u6709\u6A5F\u7387\u5728\u77ED\u6642\u9593\u5167\u5FEB\u901F\u6062\u5FA9\u5C11\u8A31\u8840\u91CF"
+  DetailedDescription:
+  - AttackedBuff_Regenerate
+  - "\u88AB\u653B\u64CA\u6642\uFF0C\u6709(\u6A5F\u7387)\u6A5F\u7387\u5728(\u79D2)\u79D2\u5167\u6062\u5FA9(\u8840\u91CF)\u8840\u91CF\uFF0C\u6B64\u6548\u679C\u540C\u6642\u89F8\u767C\u6642\u53EA\u6703\u5237\u65B0\u4E0D\u6703\u758A\u52A0\u3002"
   monsterBuffTags: 0100000008000000

@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: AllTowerBuff_OnKill_SpawnGrave
   m_EditorClassIdentifier: 
   Index: 5
-  UpgradeName: AllTowerBuff_OnKill_SpawnGrave
-  description: 
-  DetailedDescription: 
+  UpgradeName:
+  - AllTowerBuff_OnKill_SpawnGrave
+  - 
+  description:
+  - AllTowerBuff_OnKill_SpawnGrave
+  - 
+  DetailedDescription:
+  - AllTowerBuff_OnKill_SpawnGrave
+  - 
   TowerBuffType: 010000000c000000

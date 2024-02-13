@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: ContinuousBuff_StatsStronger
   m_EditorClassIdentifier: 
   Index: 9
-  UpgradeName: ContinuousBuff_StatsStronger
-  description: 
-  DetailedDescription: 
+  UpgradeName:
+  - ContinuousBuff_StatsStronger
+  - 
+  description:
+  - ContinuousBuff_StatsStronger
+  - "\u602A\u7269\u5011\u5404\u65B9\u9762\u8B8A\u5F97\u7A0D\u5FAE\u5F37\u5927\u4E00\u9EDE"
+  DetailedDescription:
+  - ContinuousBuff_StatsStronger
+  - "\u602A\u7269\u5011\u7684\u5404\u9805\u6578\u503C(\u9664\u4E86\u79FB\u52D5\u901F\u5EA6)\u589E\u52A0(\u6578\u503C)%"
   monsterBuffTags: 0b00000007000000

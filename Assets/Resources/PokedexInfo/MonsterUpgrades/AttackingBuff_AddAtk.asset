@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: AttackingBuff_AddAtk
   m_EditorClassIdentifier: 
   Index: 3
-  UpgradeName: AttackingBuff_AddAtk
-  description: 
-  DetailedDescription: 
+  UpgradeName:
+  - AttackingBuff_AddAtk
+  - 
+  description:
+  - AttackingBuff_AddAtk
+  - "\u653B\u64CA\u6642\u9010\u6F38\u589E\u52A0\u653B\u64CA\u529B\uFF0C\u4E00\u6BB5\u6642\u9593\u5167\u672A\u653B\u64CA\u6703\u6D88\u9000\u3002"
+  DetailedDescription:
+  - AttackingBuff_AddAtk
+  - "\u653B\u64CA\u6642\u9010\u6F38\u589E\u52A0(\u6578\u503C)\u653B\u64CA\u529B\uFF0C(\u79D2\u6578)\u5167\u672A\u653B\u64CA\u6703\u6D88\u9000\u3002"
   monsterBuffTags: 0200000008000000

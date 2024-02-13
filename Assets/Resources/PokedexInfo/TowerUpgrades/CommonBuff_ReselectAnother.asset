@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: CommonBuff_ReselectAnother
   m_EditorClassIdentifier: 
   Index: 7
-  UpgradeName: CommonBuff_ReselectAnother
-  description: 
-  DetailedDescription: 
+  UpgradeName:
+  - CommonBuff_ReselectAnother
+  - 
+  description:
+  - CommonBuff_ReselectAnother
+  - 
+  DetailedDescription:
+  - CommonBuff_ReselectAnother
+  - 
   TowerBuffType: 0000000000000000

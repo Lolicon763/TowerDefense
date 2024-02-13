@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: DefeatedBuff_RegenerateField
   m_EditorClassIdentifier: 
   Index: 13
-  UpgradeName: DefeatedBuff_RegenerateField
-  description: 
-  DetailedDescription: 
+  UpgradeName:
+  - DefeatedBuff_RegenerateField
+  - 
+  description:
+  - DefeatedBuff_RegenerateField
+  - "\u6B7B\u4EA1\u6642\uFF0C\u6709\u6A5F\u7387\u5728\u8173\u4E0B\u5C55\u958B\u4E00\u500B\u529B\u5834"
+  DetailedDescription:
+  - DefeatedBuff_RegenerateField
+  - "\u6B7B\u4EA1\u6642\uFF0C\u6709(\u6578\u503C)\u6A5F\u7387\u5728\u8173\u4E0B\u5C55\u958B\u4E00\u500B(\u6578\u503C)\u5927\u5C0F\u7684\u529B\u5834"
   monsterBuffTags: 0300000006000000

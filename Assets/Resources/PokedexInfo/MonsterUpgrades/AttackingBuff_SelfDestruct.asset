@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: AttackingBuff_SelfDestruct
   m_EditorClassIdentifier: 
   Index: 5
-  UpgradeName: AttackingBuff_SelfDestruct
-  description: 
-  DetailedDescription: 
+  UpgradeName:
+  - AttackingBuff_SelfDestruct
+  - 
+  description:
+  - AttackingBuff_SelfDestruct
+  - "\u653B\u64CA\u66FF\u63DB\u6210\u81EA\u7206"
+  DetailedDescription:
+  - AttackingBuff_SelfDestruct
+  - "\u653B\u64CA\u529B\u4E0A\u5347\u70BA\u6700\u5927\u8840\u91CF\u7684\u4E00\u5B9A\u6BD4\u4F8B\uFF0C\u653B\u64CA\u6642\uFF0C\u640D\u5931100%\u751F\u547D\u3002"
   monsterBuffTags: 0200000008000000
