@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour
     public GameObject HealthBarsParent;
     private void Awake()
     {
+        
         if (GameControllerInstance == null)
         {
             GameControllerInstance = this;
