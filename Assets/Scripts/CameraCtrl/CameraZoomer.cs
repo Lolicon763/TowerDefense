@@ -17,7 +17,9 @@ public class CameraZoomer : MonoBehaviour
     }
     void Update()
     {
-        if (!BuildManager.BuildManagerInstance.IsSelecting && Input.touchCount == 1)
+        bool isSingleTouchOrMouseClick = Input.touchCount == 1 || (Input.touchCount == 0 && Input.GetMouseButton(0));
+
+        if (!BuildManager.BuildManagerInstance.IsSelecting && isSingleTouchOrMouseClick)
         {
             Drag();
         }

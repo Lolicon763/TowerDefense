@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>AFSGoogle.Apis.Drive.v3.Windows</id>
+    <version>2.0.0</version>
+    <title>AFSGoogle.Apis.Drive.v3</title>
+    <authors>AFAll</authors>
+    <owners>AFAll</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>AFSGoogle.Apis.Drive.v3.Windows
+works with Windows 10 Fall Creators Update
+
+exact same code from Google.Apis.Drive.V3 only adapted to use UWP again</description>
+    <dependencies>
+      <group>
+        <dependency id="Google.Apis" version="1.32.0" exclude="Build,Analyzers" />
+        <dependency id="AFSGoogle.Apis.Auth.Windows" version="1.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

@@ -16,6 +16,7 @@ public class SpawnMap : MonoBehaviour
     public Transform FloorParent, WallParent, CastleParent, SpawnPointParent;
     public static Dictionary<Vector3, Grid> GridMap = new();
     public CameraZoomer CameraZoomer;
+    public static List<GameObject> Objs = new();
     private const float spacing = 1.0f;
 
     public void GenerateLevelFromJson(string jsonData)
@@ -47,6 +48,10 @@ public class SpawnMap : MonoBehaviour
                     obj = null;
                     break;
             }
+            if (obj!= null)
+            {
+                Objs.Add(obj);
+            }
             Grid grid = new Grid
             {
                 Obj = obj,
@@ -56,6 +61,16 @@ public class SpawnMap : MonoBehaviour
             GridMap.Add(position, grid);
         }
         LogOut(levelData.waves);
+    }
+    public static void ClearObjs()
+    {
+        for (int i = Objs.Count - 1; i >= 0; i--)
+        {
+            var item = Objs[i];
+            Objs.RemoveAt(i);
+            Destroy(item);
+        }
+
     }
     public void LogOut(List<List<Dictionary<int, int>>> Temp)
     {

@@ -7,6 +7,7 @@ using UnityEngine.UI;
 using System.Linq;
 public class CostumGameManager : MonoBehaviour
 {
+    public static CostumGameManager instance;
     private System.Random rand = new System.Random(); // 隨機數生成器
     public GamePhase currentPhase;
     public TMPro.TextMeshProUGUI phaseText;
@@ -35,14 +36,36 @@ public class CostumGameManager : MonoBehaviour
     private List<Button> filteredMonsterBuff = new();
     private List<Button> filteredTowerBuff = new();
     public TMPro.TextMeshProUGUI BuffDetailText;
+    private bool first_init = false;
+    private void Awake()
+    {
+
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     void Start()
     {
         SetGamePhase(GamePhase.StartOfTurn);
+        ResetAvaliableBuffs();
+    }
+    void ResetAvaliableBuffs()
+    {
+        avaliableMonsterBuffs.Clear();
         for (int i = 0; i < 17; i++)
         {
             avaliableMonsterBuffs.Add(i);
         }
-        AddListenersToButtons();
+        if (!first_init)
+        {
+            AddListenersToButtons();
+        }
     }
     void Update()
     {
@@ -170,6 +193,7 @@ public class CostumGameManager : MonoBehaviour
             filteredTowerBuff.Add(button);
             button.onClick.AddListener(() => ShowDetail(text));
         }
+        first_init = true;
     }
     void OnTowerFilterButtonClick(TowerBuffTag tag)
     {
@@ -259,6 +283,15 @@ public class CostumGameManager : MonoBehaviour
     {
         enhancementPopup.GetComponentInChildren<Text>().text = message;
         enhancementPopup.SetActive(true);
+    }
+    public void ResetLevelData()
+    {
+        nodeInGames.Clear();
+        MonsterSpawnPointPos.Clear();
+        currentWave = 0;
+        CurrentLevelWave.Clear();
+        CurrentLevelData = new LevelData();
+        ResetAvaliableBuffs();
     }
     public void GetCurrentLevelData(string jsonData)
     {

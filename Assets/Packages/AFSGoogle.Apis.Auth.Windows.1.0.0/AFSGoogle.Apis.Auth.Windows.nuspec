@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>AFSGoogle.Apis.Auth.Windows</id>
+        <version>1.0.0</version>
+        <title>AFSGoogle.Apis.Auth</title>
+        <authors>AF Solutions</authors>
+        <iconUrl>https://drive.google.com/file/d/1ClPJJRdBxge-Tj2Zn1EKKTUk27dtAZj7/view?usp=sharing</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Googles.Apis.Auth rewritten for usage with UWP</description>
+        <releaseNotes>V1.0.0.0. works with Windows 10 Fall Creators Update</releaseNotes>
+        <dependencies>
+            <dependency id="Google.Apis.Core" version="1.32.0" />
+            <dependency id="Google.Apis" version="1.32.0" />
+        </dependencies>
+    </metadata>
+</package>

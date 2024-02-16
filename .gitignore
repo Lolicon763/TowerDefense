@@ -19,6 +19,7 @@ UserSettings/
 
 # OS generated files #
 .DS_Store*
+.vs/
 ._*
 .Spotlight-V100
 .Trashes

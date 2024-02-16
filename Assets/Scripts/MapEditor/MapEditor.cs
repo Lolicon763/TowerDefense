@@ -1,6 +1,7 @@
 ﻿using GameEnum;
 using Newtonsoft.Json;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -123,12 +124,6 @@ public class MapEditor : MonoBehaviour
     {
         if (isSettingValue) return;
         MonsterUISaved[CurrentEditingWave][indx] = false;
-        StringBuilder stringBuilder = new StringBuilder();
-        for (int i = 0; i < 3; i++)
-        {
-            stringBuilder.AppendLine($"bool = {MonsterUISaved[CurrentEditingWave][i]}");
-        }
-        Debug.Log(stringBuilder.ToString());
         monsterSpawnUIsManager.RefreshInputColors(MonsterUISaved[CurrentEditingWave]);
     }
     void Init()
@@ -240,7 +235,8 @@ public class MapEditor : MonoBehaviour
             mapName = GetNextDefaultMapName();
         }
 
-        string path = Path.Combine(mapsDirectory, mapName + ".json");
+        //   string path = Path.Combine(mapsDirectory, mapName + ".json");
+        string path = $"Assets/Resources/Maps/{mapName}.json";
         if (!TrySaveMap(path))
         {
             Debug.Log("Not Valid");
@@ -250,9 +246,29 @@ public class MapEditor : MonoBehaviour
         else
         {
             Debug.Log("Saved");
-            // 地圖已成功保存
+            GoogleDriveMapHandler.UploadFileAsync(path, $"{mapName}.json").ContinueWith(task =>
+            {
+                if (task.Exception != null)
+                {
+                    Debug.LogError("Upload Failed: " + task.Exception);
+                }
+                else
+                {
+                    Debug.Log("Upload Successful");
+                    string shareLink = task.Result; // 假設 UploadFileAsync 現在返回共享連結
+                    Debug.Log("Share Link: " + shareLink);
+                }
+            });
         }
     }
+    private IEnumerator ListFilesCoroutine()
+    {
+        var task = GoogleDriveMapHandler.ListFilesAsync();
+        yield return new WaitUntil(() => task.IsCompleted);
+
+        // 這裡你可以處理任何後續操作
+    }
+
     private bool TrySaveMap(string path)
     {
         Dictionary<Vector3, NodeInGame> nodeInGames = GetMap();
@@ -356,20 +372,13 @@ public class MapEditor : MonoBehaviour
         string path = Path.Combine(Application.persistentDataPath, mapName + ".json");
         overwriteWarningPanel.SetActive(false);
     }
-    public void ClearAllMaps()
+    public void ClearAllNodes()
     {
-        string mapsDirectory = Path.Combine(Application.persistentDataPath, "Maps");
-        if (Directory.Exists(mapsDirectory))
+        Debug.LogWarning("應該要添加警示以免誤觸");
+        SetEmpty();
+        foreach (var item in nodesMap)
         {
-            string[] files = Directory.GetFiles(mapsDirectory);
-            foreach (string file in files)
-            {
-                File.Delete(file);
-            }
-        }
-        else
-        {
-            Debug.Log("Maps directory doesn't exist!");
+            OnNodeClick(item.Value);
         }
     }
 
@@ -510,7 +519,6 @@ public class MapEditor : MonoBehaviour
             {
                 if (spawnPoints[i]!= null)
                 {
-                    Debug.Log($"spawnPoints[i].SpawnPointIndex = {spawnPoints[i].SpawnPointIndex}");
                     spawnPoints[i].SpawnPointIndex = i;
                 }
 
