@@ -17,7 +17,7 @@ public class LevelSelector : MonoBehaviour
         // 設置每個按鈕的點擊事件
         for (int i = 0; i < levelButtons.Length; i++)
         {
-            int levelIndex = i + 1; // 關卡編號從1開始
+            int levelIndex = i + 1;
             levelButtons[i].onClick.AddListener(() => LoadInitLevel(levelIndex));
         }
     }

@@ -84,20 +84,32 @@ public class LaserAttackStrategy : IAttackStrategy
     }
     public void ExecuteAttack(AttackContext context, float manaPercent)
     {
-        if (context.EnemiesInRange.Count > 0)
+        if (context.EnemiesInRange.Count <= 0)
         {
-            _target = context.EnemiesInRange[0];
+            return;
+        }
+        Vector3 towerV = context.Tower.transform.position;
+        float closestDist = 100; 
+        foreach (var item in context.EnemiesInRange)
+        {
+            float dist = (towerV -item.transform.position).magnitude;
+            if (dist<closestDist)
+            {
+                closestDist = dist;
+                _target = item;
+            }
         }
         if (_target != null)
         {
             GameObject laserInstance = ResourcesPool.ResourcePoolInstance.GetLaser(context.Tower.transform.position);
-            LaserAction laserAction = laserInstance.GetComponent<LaserAction>();
+            LaserAction laserAction = laserInstance.GetComponentInChildren<LaserAction>();
             laserAction.Dmg = context.Dmg;
             laserAction.parentTower = context.Tower;
             Vector3 dir = _target.transform.position - context.Tower.transform.position;
             int manaAmount = context.Tower.GetManaCost();
             ManaManager.Instance.ReduceMana(manaAmount);
             float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90f;
+            laserAction._target = _target;
             laserInstance.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
 

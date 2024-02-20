@@ -7,6 +7,7 @@ public class LaserAction : MonoBehaviour
     public float Dmg;
     public LayerMask MonsterLayer;
     public TowerCTRL parentTower;
+    public GameObject _target;
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.tag == "Enemy")
@@ -39,7 +40,12 @@ public class LaserAction : MonoBehaviour
             dmg = Mathf.Max(dmg * 0.9f, minDmg);
         }
     }
-
+    void Update()
+    {
+        Vector3 dist = _target.transform.position - transform.position;
+        float angle = Mathf.Atan2(dist.y, dist.x) * Mathf.Rad2Deg -90;
+        transform.rotation = Quaternion.Euler(0, 0, angle);
+    }
     void OnTriggerExit2D(Collider2D col)
     {
         if (col.tag == "Enemy")

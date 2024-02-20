@@ -153,7 +153,7 @@ public class ResourcesPool : MonoBehaviour
             {
                 obj.SetActive(true);
                 obj.transform.position = pos;
-                obj.GetComponent<Collider2D>().enabled = true;
+                obj.GetComponentInChildren<Collider2D>().enabled = true;
                 return obj; // 返回這個對象
             }
         }

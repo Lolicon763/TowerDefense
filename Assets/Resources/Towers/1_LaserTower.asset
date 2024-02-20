@@ -17,7 +17,7 @@ MonoBehaviour:
   attackPower: 0
   defensePower: 40
   magicCost: 0
-  range: 10
+  range: 5
   TowerIndex: 0
   attackCooldown: 1.5
   PathCost: 10
