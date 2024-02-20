@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
@@ -25,7 +25,7 @@ namespace GameEnum
     [Serializable]
     public enum MonsterType
     {
-        Goblin, Ogre, Troll // ¥u¬O¬°¤F¥Ü½d¡A±z¥i¥H²K¥[§ó¦hªº©Çª«Ãş«¬
+        Goblin, Ogre, Troll // åªæ˜¯ç‚ºäº†ç¤ºç¯„ï¼Œæ‚¨å¯ä»¥æ·»åŠ æ›´å¤šçš„æ€ªç‰©é¡å‹
     }
     [Serializable]
     public enum GamePhase 
@@ -132,6 +132,14 @@ namespace GameEnum
         Special,
         Continuous
     }
+    [System.Serializable]
+    public class MapInfo
+    {
+        public string name;
+        public string index;
+        public string fileId;
+    }
+
 }
 public class MonsterEventBuff
 {

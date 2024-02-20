@@ -75,6 +75,11 @@ public class MonsterMove : MonoBehaviour
     }
     void MoveTowardsEndPos()
     {
+        if (targetIndex >= path.Count)
+        {
+            OnReachEnd();
+            return;
+        }
         if (path != null)
         {
             if (Vector3.Distance(transform.position, path[0].Position) < 0.1f&&!init)
@@ -94,10 +99,6 @@ public class MonsterMove : MonoBehaviour
                     GetForceField();
                     monster.LastPos = targetPosition;
                     targetIndex++;
-                    if (targetIndex >= path.Count)
-                    {
-                        OnReachEnd();
-                    }
                 }
             }
             else

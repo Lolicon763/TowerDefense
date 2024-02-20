@@ -212,7 +212,7 @@ public class MapEditor : MonoBehaviour
         }
     }
     #region HandleMapSave()
-    public void HandleSave()
+    public async void HandleSave()
     {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < Wavecount; i++)
@@ -234,31 +234,26 @@ public class MapEditor : MonoBehaviour
         {
             mapName = GetNextDefaultMapName();
         }
-
-        //   string path = Path.Combine(mapsDirectory, mapName + ".json");
         string path = $"Assets/Resources/Maps/{mapName}.json";
         if (!TrySaveMap(path))
         {
             Debug.Log("Not Valid");
-            // 這裡可以添加任何你希望在地圖無效時執行的代碼
-            // 例如：彈出一個錯誤對話框通知玩家
         }
         else
         {
             Debug.Log("Saved");
-            GoogleDriveMapHandler.UploadFileAsync(path, $"{mapName}.json").ContinueWith(task =>
+            try
             {
-                if (task.Exception != null)
-                {
-                    Debug.LogError("Upload Failed: " + task.Exception);
-                }
-                else
-                {
-                    Debug.Log("Upload Successful");
-                    string shareLink = task.Result; // 假設 UploadFileAsync 現在返回共享連結
-                    Debug.Log("Share Link: " + shareLink);
-                }
-            });
+                string shareLink = await GoogleDriveMapHandler.UploadMapAsync(path, $"{mapName}.json");
+                Debug.Log("Upload Successful");
+                Debug.Log($"Share Link: {shareLink}");
+                // 更新 UI 或其他操作...
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError($"Upload Failed: {ex.Message}");
+                // 异常处理...
+            }
         }
     }
     private IEnumerator ListFilesCoroutine()
